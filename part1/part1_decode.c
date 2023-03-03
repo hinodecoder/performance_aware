@@ -14,11 +14,11 @@ char namesWord[8][3] = {"al", "cl", "dl", "bl", "ah", "ch", "dh", "bh"};
 
 int main()
 {
-    FILE *asmfile = fopen("simple", "rb");
+    FILE *asmfile = fopen("program", "rb");
     char buffer[2];
     if (asmfile)
     {
-        FILE *decodedFile = fopen("simple_dissassembly.asm", "w");
+        FILE *decodedFile = fopen("program_decodel.asm", "w");
         fputs("bits 16", decodedFile);
         while (!feof(asmfile))
         {
